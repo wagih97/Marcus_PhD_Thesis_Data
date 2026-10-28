@@ -67,3 +67,5 @@ This viewer presents mPFC Neuropixels 2.0 recordings from the sleep-control (6 m
 - **Light and dark themes:** Use the button in the top-right corner to switch themes.
 
 ## Methods and source data
+
+The viewers provide an interactive way to inspect the data accompanying the thesis. Experimental procedures, definitions of behavioral measures, the population-activity analyses and the statistical tests are described in the thesis and its source-data workbook.
