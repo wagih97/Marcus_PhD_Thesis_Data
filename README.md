@@ -2,16 +2,16 @@
 
 This repository provides interactive companions to a doctoral thesis on olfactory transitive inference in mice. The thesis covers the establishment of a head-fixed task, post-session chemogenetic manipulation of the medial prefrontal cortex (mPFC), and Neuropixels recordings from mPFC in sleep-control and sleep-deprivation groups.
 
-Mice were trained on four overlapping premise pairs, AB, BC, CD and DE, and then tested on the untrained AE and BD pairs without sucrose or quinine delivery. Two viewers present the data:
+Mice were trained on four overlapping premise pairs, AB, BC, CD, and DE, and then tested on the untrained AE and BD pairs without sucrose or quinine delivery. Two viewers present the data:
 
 | File | Contents |
 | --- | --- |
-| `marcus_thesis.html` | Behavior: schedules, performance charts and individual-mouse lick rasters for all five groups |
+| `marcus_thesis.html` | Behavior: schedules, performance charts, and individual-mouse lick rasters for all five groups |
 | `marcus_mPFC_interactive_data_thesis.html` | mPFC population activity in the two Neuropixels groups, days 13–22 |
 
 ## Open the viewers
 
-Download either file and open it in a web browser. Each file contains its data, graphics and fonts, works offline after downloading, and requires no installation.
+Download either file and open it in a web browser. Each file contains its data, graphics, and fonts, works offline after downloading, and requires no installation.
 
 ## Behavioral viewer
 
@@ -27,7 +27,7 @@ Choose an experiment from the cards below the page header, or from the **Experim
 | Neuropixels | Sleep control | 6 |
 | Neuropixels | Sleep deprivation | 6 |
 
-Each selection displays the corresponding behavioral schedule, performance data and test rasters. The schedules include the timing of post-session treatment, recording and sleep deprivation where applicable.
+Each selection displays the corresponding behavioral schedule, performance data, and test rasters. The schedules include the timing of post-session treatment, recording and sleep deprivation where applicable.
 
 ### Explore the data
 
@@ -40,7 +40,7 @@ Each selection displays the corresponding behavioral schedule, performance data 
 - **Downloads:** The performance chart, schedule, rasters and the current lick-detail view can be downloaded as SVG files using the controls in the viewer.
 - **Light and dark themes:** Use the button in the top-right corner to switch themes. Charts and rasters stay on a white background in both.
 
-Selecting an individual mouse highlights its performance curve without changing the group mean or SEM. Click “Mean ± SEM” to show or hide the mean line, markers and error bars together. During establishment and chemogenetic randomization, performance is aligned by premise pair across mice, so hover labels identify pair-aligned positions rather than a single chronological day for each block. The Neuropixels performance chart follows the recorded day and pair sequence.
+Selecting an individual mouse highlights its performance curve without changing the group mean or SEM. Click “Mean ± SEM” to show or hide the mean line, markers, and error bars together. During establishment and chemogenetic randomization, performance is aligned by premise pair across mice, so hover labels identify pair-aligned positions rather than a single chronological day for each block. The Neuropixels performance chart follows the recorded day and pair sequence.
 
 ## Population activity viewer
 
@@ -56,7 +56,7 @@ This viewer presents mPFC Neuropixels 2.0 recordings from the sleep-control (6 m
 ### Explore the data
 
 - **Cohort and day:** Choose a cohort and a recording day from the timeline below the page header; each day lists its two odor pairs. The marker between days 18 and 19 reads **6 h sleep deprivation** for the sleep-deprivation group and **Sleep** for the sleep-control group. The control bar at the top of the page stays in view while you scroll and repeats the day and cohort controls.
-- **Time cursor:** Press play or drag the slider to move through the trial from −1 to 4 s relative to odor onset, covering the pre-odor period, the odor (0–2 s) and the delay (2–4 s). The cursor links the trajectories, heatmaps, decoding curve and confusion matrix. Trajectory and heatmap time points are 100-ms bins; decoding uses 1-s windows centered on the same times.
+- **Time cursor:** Press play or drag the slider to move through the trial from −1 to 4 s relative to odor onset, covering the pre-odor period, the odor (0–2 s), and the delay (2–4 s). The cursor links the trajectories, heatmaps, decoding curve and confusion matrix. Trajectory and heatmap time points are 100-ms bins; decoding uses 1-s windows centered on the same times.
 - **Population trajectories:** Rotate the three-dimensional PCA trajectories (PC1–PC3, correct trials) by dragging or with the arrow keys, and scroll to zoom. Click a point to move the time cursor to it. Select a condition in the legend to show or hide it. **Floor projection** adds each trajectory’s PC1–PC2 shadow, **Orbit** rotates the view continuously, and **Reset view** restores the starting view.
 - **Activity heatmaps:** Baseline-normalized activity of each neuron for the four conditions, from correct and incorrect completed trials, on a fixed scale from −5 to +5. Scroll to zoom the rows, drag to pan, and click to set the time. Hover over a row to compare that neuron across the four conditions. **Show all rows** returns to the full population.
 - **Four-class SVM decoding:** Decoding accuracy from correct trials in 1-s windows, shown as the mean ± SEM across mice with individual mice as faint lines. Each window is compared with the −1 s pre-odor window (paired t-test, uncorrected). Hover for the values in a window, or click to move the time cursor. **Decoding values for every window** lists all windows in a table.
@@ -66,6 +66,15 @@ This viewer presents mPFC Neuropixels 2.0 recordings from the sleep-control (6 m
 - **Keyboard:** <kbd>Space</kbd> plays or pauses, <kbd>←</kbd> and <kbd>→</kbd> step through time, and <kbd>[</kbd> and <kbd>]</kbd> change the day.
 - **Light and dark themes:** Use the button in the top-right corner to switch themes.
 
-## Methods and source data
+## Source data
+
+Figure-specific source data and statistical results are provided in two Excel workbooks:
+
+| Workbook | Figures |
+|---|---|
+| [Thesis_Source_Data_Figures_2-24.xlsx](Thesis_Source_Data_Figures_2-24.xlsx) | 2, 3, 6–10, 15–18, 23 and 24 |
+| [Thesis_Source_Data_Figures_25-28.xlsx](Thesis_Source_Data_Figures_25-28.xlsx) | 25–28 |
+
+Worksheet names identify the corresponding figures or analyses. Both workbooks include the Statistics sheet and supporting neural-analysis sheets to preserve their formula dependencies. These shared sheets contain the same data in both files.
 
 The viewers provide an interactive way to inspect the data accompanying the thesis. Experimental procedures, definitions of behavioral measures, the population-activity analyses and the statistical tests are described in the thesis and its source-data workbook.
